@@ -1,0 +1,52 @@
+{
+  "name": "discord-player-tidal",
+  "version": "0.1.0",
+  "description": "A custom extractor made for discord-player that enables you to extract from Tidal.",
+  "main": "dist/TidalExtractor.js",
+  "author": "Lakhindar Pal",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "soundcloud.ts": "^0.5.2",
+    "tidal-music-api": "^1.2.1",
+    "youtube-sr": "^4.3.11",
+    "yt-stream": "^1.4.14"
+  },
+  "devDependencies": {
+    "@discord-player/extractor": "^4.4.7",
+    "prettier": "^2.8.8",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "discord-player": "*",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "npm run lint && tsc && npm run format:dist",
+    "format:dist": "prettier --write \"dist/*.js\"",
+    "format:src": "prettier --write \"src/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "npm:publish": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LakhindarPal/discord-player-tidal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LakhindarPal/discord-player-tidal/issues"
+  },
+  "keywords": [
+    "tidal",
+    "discord-player",
+    "discord-player-tidal",
+    "tidal-api",
+    "tidal-extractor",
+    "discord-player",
+    "discord-player-extractor",
+    "extractor"
+  ],
+  "types": "./dist/TidalExtractor.d.ts",
+  "homepage": "https://github.com/LakhindarPal/discord-player-tidal#readme"
+}
